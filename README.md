@@ -73,7 +73,7 @@ SQL (PostgreSQL) · Google Sheets
 ### Files
 
 - `analysis.sql` — all SQL queries organised by analysis section
-- `MercadoLibre_Funnel_Retention_Executive_Report.xlsx` — executive summary with funnel and retention analysis
+- [MercadoLibre_Funnel_Retention_Executive_Report.xlsx](./MercadoLibre_Funnel_Retention_Executive_Report.xlsx) — full workbook with executive summary, funnel analysis, and retention analysis by country and cohort
 
 ---
 
