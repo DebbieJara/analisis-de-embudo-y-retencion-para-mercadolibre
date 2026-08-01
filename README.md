@@ -73,7 +73,7 @@ SQL (PostgreSQL) · Google Sheets
 ### Files
 
 - `analysis.sql` — all SQL queries organised by analysis section
-- [Full analysis (Google Sheets)](https://docs.google.com/spreadsheets/d/13A1IXezYw4e-keuND5KnZpFjUv5mq9yZ/edit?gid=1401846721#gid=1401846721) — executive summary, funnel analysis, and retention analysis by country and cohort
+- [Full analysis (Google Sheets)](https://docs.google.com/spreadsheets/d/13A1IXezYw4e-keuND5KnZpFjUv5mq9yZ/edit?usp=sharing&ouid=106602298566061042272&rtpof=true&sd=true) — executive summary, funnel analysis, and retention analysis by country and cohort
 
 ---
 
