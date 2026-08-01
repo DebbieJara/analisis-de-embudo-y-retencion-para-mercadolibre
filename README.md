@@ -2,41 +2,42 @@
 
 ## The Business Problem
 
-MercadoLibre's product director posed a challenge that every growth team eventually faces: *"We need to understand at which stage we lose users — and how we can improve their retention over time."*
+MercadoLibre's product director posed a challenge that every growth team eventually faces: *"We need to understand at which stage we lose users, and how we can improve their retention over time."*
 
-Millions of users browse, click, and abandon. The question isn't whether drop-off happens — it's where, how much, and what to do about it.
+Millions of users browse, click, and abandon. The question isn't whether drop-off happens. It's where, how much, and what to do about it.
 
 I used SQL to find the answers.
 
 ## What I Did
 
-Using two datasets covering January–August 2025, I mapped the complete conversion funnel from first visit to purchase, identified the largest drop-off points, and analysed user retention at D7, D14, D21, and D28 — both by country and by monthly cohort.
+Using two datasets covering January–August 2025, I mapped the complete conversion funnel from first visit to purchase, identified the largest drop-off points, and analysed user retention at D7, D14, D21, and D28, both by country and by monthly cohort.
 
 Every metric was built from scratch in SQL using CTEs, window functions, and conditional aggregation. Results were exported to Google Sheets for visualisation and executive reporting.
 
 ## What the Data Revealed
 
 **Funnel:**
-- The largest drop-off occurs at the **select_item → add_to_cart** step, with a ~65.9% loss — signalling critical friction at purchase intent, not at checkout
+- The largest drop-off occurs at the **select_item → add_to_cart** step, with a ~65.9% loss, signalling critical friction at purchase intent rather than at checkout
+- Conversion from select_item to add_to_cart is ~14% overall
 - Drop-off varies by country: Uruguay and Chile retain more users at this stage; Peru and Bolivia show the highest losses
-- The problem is not transactional — it is rooted in trust, perceived value, and information clarity
+- The problem is not transactional. It is rooted in trust, perceived value, and information clarity
 
 **Retention:**
-- Initial retention is strong: D7 ~86%, but falls sharply to ~2–3% by D28 — revealing a habit-formation gap
+- Initial retention is strong: D7 ~86%, but falls sharply to ~2-3% by D28, revealing a habit-formation gap
 - Cohorts January–July show stable behaviour across all retention points
 - The **August 2025 cohort is anomalous**: D7 dropped to 70.8% and D28 to just 0.2%, suggesting a deterioration in acquisition quality or onboarding experience that requires immediate investigation
 
+![Executive Summary Dashboard](images/dashboard_resumen.png)
+*Executive summary dashboard built in Google Sheets*
+
 ![Conversion Funnel by Stage](images/funnel_general.png)
-*Overall conversion funnel — drop-off at each stage*
+*Overall conversion funnel: drop-off at each stage*
 
 ![Drop-off by Country](images/funnel_por_pais.png)
 *select_item → add_to_cart drop-off segmented by country*
 
 ![Retention Curves by Cohort](images/retencion_cohortes.png)
-*D7–D28 retention curves by monthly cohort — August anomaly visible*
-
-![Executive Summary Dashboard](images/dashboard_resumen.png)
-*Executive summary dashboard built in Google Sheets*
+*D7–D28 retention curves by monthly cohort. August anomaly visible*
 
 ## Technical Details
 
@@ -72,10 +73,9 @@ SQL (PostgreSQL) · Google Sheets
 
 ### Files
 
-- `analysis.sql` — all SQL queries organised by analysis section
+- `mercadolibre_analysis.sql` — all SQL queries organised by analysis section
 - [Full analysis (Google Sheets)](https://docs.google.com/spreadsheets/d/13A1IXezYw4e-keuND5KnZpFjUv5mq9yZ/edit?usp=sharing&ouid=106602298566061042272&rtpof=true&sd=true) — executive summary, funnel analysis, and retention analysis by country and cohort
 
 ---
-
-*By Deborah Jara | Data Analyst | México*
+*By Deborah Jara | People & Learning Analytics · Business Intelligence | México*
 [LinkedIn](https://linkedin.com/in/deborahjara) · [GitHub](https://github.com/DebbieJara)
