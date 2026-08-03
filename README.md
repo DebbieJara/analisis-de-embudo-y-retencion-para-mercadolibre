@@ -1,3 +1,5 @@
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+
 # Funnel & Retention Analysis with SQL — MercadoLibre
 
 ## The Business Problem
